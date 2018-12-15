@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" , href="/style/start_style.css">
+</head>
+
+<body>
+
+
+
+<div class="container-fluid">
+      
+
+    <main>
+        <div class="row background_main">
+            <div class="col-md-4 col-xs-0"></div>
+            <div class="col-md-4 col-xs-12 register">
+                <img src='/img/lock.png' , class="pic_lock">
+                <div class="title_text">Регистрация</div>
+                <div class="header_logo_text">
+                    <p>Данный сайт поможет вам как узнать покрытие вашей целевой аудитории, так и проанализировать ваш бизнес.
+                    <br>Так же вы можете <a href="../login"> авторизоваться</a> </p> </div>
+                  
+                <form id = 'login' method = 'post'  action="/register">
+                    <label for='name'>Имя пользователя</label><br>
+                    <input type='text' , id='name', name = 'username' class="form-control" required><br>
+                    <label for='password'>Пароль <span class="MessagePassword"></span></label><br>
+                    <input type='password' , id='password', name = 'password' class="form-control" required><br>
+                    <label for='confirmPassword'>Подтвердите пароль <span class="MessagePassword"></span></label><br>
+                    <input type='password' , id='ConfirmPassword', name = 'password' class="form-control" required><br>
+                    <input type='submit' , class='button btn btn-succes'  , value='Зарегистрироваться' id="reg">
+                </form>
+            </div>
+            <div class="col-4 col-xs-0"></div>
+        </div>
+    </main>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="/js/register_check.js"></script>
+
+</body>
+
+</html>

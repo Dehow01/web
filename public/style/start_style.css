@@ -1,0 +1,90 @@
+html {
+	font-family: "Segoe UI", "Helvetica Neue", "Droid Sans", Arial, Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+        background-color: #E9E9E9;
+}
+.page_top{
+    background-color: white;
+    border-bottom: 1px solid #a5a5a5;
+}
+.background_main{
+    height: 100vh;
+    background-image: url(../img/Royal_Blue.jpg);
+}
+.logo_img{
+    float: left;
+  	height: 100%;
+  	margin-left: 50px;
+    margin-right: 10px;
+}
+.block_header{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    color: #4a4a4a;
+    font-size: 14px;
+}
+.p_header{
+    margin-top: 8px;
+}
+.login_form {
+    background-color: white;
+}
+.login{
+    margin-bottom: 18vh;
+    background: white;
+    margin-top: 100px;
+    padding: 50px;
+    border-radius: 10px;
+    
+}
+.register{
+    margin-bottom: 10vh;
+    background: white;
+    margin-top: 100px;
+    padding: 50px;
+    border-radius: 10px;
+}
+.pic_lock {
+	width: 50px;
+}
+.title_text {
+	color: black;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #2c86d3;
+}
+.header_logo_text {
+    padding-top: 15px;
+    padding-bottom: 15px;
+	color: #9a9a9a;
+	font-size: 0.9rem;
+}
+.button {
+	background-color: #2c86d3;
+	color: white;
+	margin-top: 10px;
+}
+.MessagePassword{
+    color: red;
+}
+@media (max-width: 768px) {
+    .logo_img{
+        min-width: 15%;
+        max-width: 50%;
+        height: auto;
+        margin-left: 0;
+    }
+    .p_header {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+        }
+    .login{
+        padding: 30px 25px;
+        margin-top: 20px;
+    }
+    .button{
+        width: 100%;
+    }
+}
+    

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная</title>
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../home">
+        Business analyst
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="../home">Главная <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item ">
+                <a class="nav-link" href="/analyst">Анализ продаж <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item ">
+                <a class="nav-link" href="/blog">Блог <span class="sr-only"></span></a>
+            </li>                
+        <li class="nav-item active">
+            <a class="nav-link" href="/target">Анализ ЦА <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+                <a class="nav-link" href="/export">Export</a><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+                <a class="nav-link" href="/admin_news">Admin news<span class="sr-only"></span></a>
+        </li>
+       
+        
+      </ul>
+      <span class="navbar-text">
+            <!-- <a href="../logout" class="navber_a" >Выход</a> -->
+            <!-- <a href="../register" class="navber_a">Регистрация</a> -->
+     </span>
+    </div>
+  </nav>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                    <br>
+                    <br>
+                    <br>
+            <form id="export_db" method="post" action="/export">
+                <p class="export">Выгрузка коллекции</p>
+                <label for="gender1 " class="export">Выберите коллекцию для выгрузки: </label>
+                
+                <select class="form-control selcls int_blog" id="gender1" name="coll" >
+
+                        <option selected value="blog" >blog</option>
+                        <option value="introduced_news ">introduced_news </option>
+                        <!-- <option value="notes">notes</option> -->
+                         
+                 </select>
+                    <br>
+                    <input type="submit" class="btn btn-outline-success btn-lg" 
+                    value="выгрузить" id="ex">
+                    
+                   
+                  
+            </form>
+              </div>
+          </div>
+         </div>
+
+
+         </body>
+         </html> 

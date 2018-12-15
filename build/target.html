@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная</title>
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../home">
+        Business analyst
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="../home">Главная <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item ">
+                <a class="nav-link" href="/analyst">Анализ продаж <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item ">
+                <a class="nav-link" href="/blog">Блог <span class="sr-only"></span></a>
+            </li>                
+        <li class="nav-item active">
+            <a class="nav-link" href="/target">Анализ ЦА <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+                <a class="nav-link" href="/add_db">Добавить новость <span class="sr-only"></span></a>
+        </li>
+       
+        
+      </ul>
+      <span class="navbar-text">
+            <!-- <a href="../logout" class="navber_a" >Выход</a> -->
+            <!-- <a href="../register" class="navber_a">Регистрация</a> -->
+     </span>
+    </div>
+  </nav>
+      <div class="container">
+          <div class="row asket">
+            <div class="col-md-12">
+              <div class="divdivch alert alert-primary">
+                    <form id = 'target' name="target_form">
+                <p class="divdivch_p">Пол ЦА?</p>
+              
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Male" id="Check1" name="sex">
+                    <label class="form-check-label" for="Check1">
+                        Мужской
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Famale" id="Check1_2" name="sex">
+                    <label class="form-check-label" for="Check1_2">
+                        Женский
+                    </label>
+                 </div>   
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" value="not_zn" id="Check1_3" name="sex">
+                    <label class="form-check-label" for="Check1_3">
+                        Не важно
+                    </label>
+                 </div>   
+                   
+                
+                
+
+
+                <p class="divdivch_p">Возраст вашей Ц.А ?</p>
+              
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="15-19" id="Check2" name="old">
+                    <label class="form-check-label" for="Check2">
+                        15-19
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="20-24" id="Check2_2" name="old">
+                    <label class="form-check-label" for="Check2_2">
+                        20-24
+                    </label>
+                 </div>   
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" value="25-34" id="Check2_3" name="old">
+                    <label class="form-check-label" for="Check2_3">
+                        25-34
+                    </label>
+                  </div>  
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" value="35-49" id="Check2_4" name="old">
+                      <label class="form-check-label" for="Check2_4">
+                          35-49
+                      </label>
+                    </div>  
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="50-70" id="Check2_5" name="old">
+                        <label class="form-check-label" for="Check2_5">
+                            50-70
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" value="no" id="Check2_6" name="old">
+                        <label class="form-check-label" for="Check2_6">
+                            Не важно
+                        </label>
+                      </div>  
+
+                     
+
+
+
+
+
+                      <p class="divdivch_p">В какой местности живет?</p>
+              
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="Check3" value="Moscow" name="city">
+                          <label class="form-check-label" for="Check3">
+                              Москва
+                          </label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio"  id="Check3_2" value="Piter" name="city">
+                          <label class="form-check-label" for="Check3_2">
+                              Санкт-Петербург
+                          </label>
+                       </div>   
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Check3_4" value="million" name="city">
+                            <label class="form-check-label" for="Check3_4">
+                                Города 1 млн и более
+                            </label>
+                          </div>  
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" id="Check3_5" value="m-250" name="city">
+                              <label class="form-check-label" for="Check3_5">
+                                 Города от 250 тыс. до 1 млн
+                              </label>
+                            </div> 
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="Check3_6" value="no" name="city">
+                                <label class="form-check-label" for="Check3_6">
+                                    Не важно
+                                </label>
+                              </div>   
+
+            
+                          <p class="divdivch_p">Средний доход?</p>
+                         
+                          
+                        
+                          <div class="form-check">
+                                <input class="form-check-input" type="radio" value="10-25" id="Check5" name="pay">
+                                <label class="form-check-label" for="Check5">
+                                    10-24т.р
+                                </label>
+                              </div>  
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" value="25-49" id="Check5_1" name="pay">
+                                  <label class="form-check-label" for="Check5_1">
+                                      25-49т.р
+                                  </label>
+                                  </div>
+                                  <div class="form-check">
+                              <input class="form-check-input" type="radio" value="50-99" id="Check5_2" name="pay">
+                              <label class="form-check-label" for="Check5_2">
+                                      50-99т.р  
+                              </label>
+                            </div>  
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="99_more" id="Check5_3" name="pay">
+                                <label class="form-check-label" for="Check5_3">
+                                    Более 99.р
+                                </label>
+                              </div>  
+                              <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="no" id="Check5_4" name="pay">
+                                    <label class="form-check-label" for="Check5_4">
+                                        Не важно
+                                    </label>
+                                  </div>  
+                      <input type="submit" value="Расчет" id="sub" class="btn btn-outline-success btn-lg" >
+                    </form>  
+                </div>
+                <!-- <p class="Message"></p> -->
+              </div>
+              
+              <!-- <transition name="flip" mode="out-in" >
+              <questions  v-if="state == 'start'"  >
+                
+              </questions>
+              
+                <result  v-if="state == 'result'"></result>          
+          </transition> -->
+          <!-- <button class="btn btn-outline-success btn-lg" v-on:click="onResult">
+              Расчет
+          </button> -->
+          
+        </div>
+        <div class="row">
+            <div class="col-md-6 " id="graf">
+                    <p class="message">Потанциальных клиентов: <span id="message_result"></span></p>
+                    <div class="ct-chart ct-perfect-fourth"></div>
+                    
+            </div>
+        </div>
+      </div>
+      
+    
+    <script src="https://code.jquery.com/jquery-3.1.0.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/js/target.js"></script>
+    <script>
+
+    Vue.component('questions', { 
+    props:{
+     },
+    computed:{
+    
+    },
+    methods:{
+     
+    },
+    template: `<div class="alert alert-primary" role="alert">
+                 
+                 <p class="top_header">Портрет целевой аудитории онлайн </p>
+                 <p class="desc_top_header">Заполните тест и мы выдадим портрет целевой аудитории</p>
+                 
+               </div>
+         ` 
+    });
+
+
+
+
+    Vue.component('result', { 
+    props:{
+      // state:String,
+     },
+    computed:{
+    
+    },
+    methods:{
+      
+    },
+    template: `<div class="alert alert-success" role="alert">
+                 
+        <p class="top_header">Портрет целевой аудитории онлайн </p>
+                  <p class="desc_top_header">Готово!</p>
+                 
+               </div>
+         ` 
+    });
+
+      let question = new Vue({
+      el:'.asket',
+      data:{
+      state: "start",
+      
+      },
+      methods:{
+        onResult(){
+        this.state='result';
+      },
+      }
+    
+    });
+    </script>
+    <script>
+         let resul=0;
+         let marker="true";
+         $("#sub").click( function (e) {
+            e.preventDefault();
+           let target_form = document.forms["target_form"];
+           let sex = target_form.elements["sex"].value;
+           let old = target_form.elements["old"].value;
+           let city = target_form.elements["city"].value;
+           let pay = target_form.elements["pay"].value;
+           let user = JSON.stringify({sex: sex, old: old,city: city, pay: pay });
+           let request = new XMLHttpRequest();
+            request.open("POST", "/target", true);   
+            request.setRequestHeader("Content-Type", "application/json");
+            request.addEventListener("load", function () {
+                // =parseInt(request.response,10);
+                // $(".Message").html(request.response);
+                resul= parseInt(request.response.slice(1, -1));
+                graf(resul);  
+                
+            });
+            request.send(user);
+        });
+        
+            function graf(resultat){
+
+                    var all=74000000;
+                    var data = {
+                    series: [0, all],
+
+                    };
+                    
+                    var sum = function(a, b) { return a + b };
+                    $("#message_result").text(resultat+" человек");
+                    data.series[0] = resultat;
+                    data.series[1] = all-resultat;
+                    //  console.log(data.series);   
+
+                    new Chartist.Pie('.ct-chart', data, {
+
+
+                    labelInterpolationFnc: function(value) {
+
+                    return Math.round(value / data.series.reduce(sum) * 100) + '%';
+                    }
+                    
+                });
+               
+                $("#graf").show();
+                if(marker){
+                    marker=false;
+                $('html, body').animate({
+                      scrollTop: $("#graf").offset().top
+                    }, 2000);
+                    }   
+                }
+        </script>
+    </body>
+    </html>
