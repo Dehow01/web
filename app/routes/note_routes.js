@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const jsonParser = express.json();
 const fs = require('fs');
+const ca = require('./module/ca');
 module.exports = function(app, db) {
   // app.get('/notes/:id', (req, res) => {
   //   const id = req.params.id;
@@ -293,9 +294,7 @@ app.post("/target",jsonParser, function (req, res) {
     city:1,
     pay:1
   }
-  var sum = counting(req);
-  // console.log(sum);
-  // res.send(sum);
+  var sum = ca.counting(req);
   res.json(`${sum}`);
 
 
